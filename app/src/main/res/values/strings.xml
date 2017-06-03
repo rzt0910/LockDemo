@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">LockDemo</string>
+
+    <string name="title_activity_my_lock_screen">MyLockScreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

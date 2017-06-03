@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="rzt910.github.com.lockdemo">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:name=".Myapplication"
         android:allowBackup="true"
@@ -17,6 +17,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MyLockScreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_my_lock_screen"
+            android:theme="@style/FullscreenTheme"/>
+        <service android:name=".service.LockService">
+        </service>
     </application>
 
 </manifest>
