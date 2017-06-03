@@ -6,6 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
+import com.facebook.drawee.drawable.ProgressBarDrawable;
+import com.facebook.drawee.drawable.ScalingUtils;
+import com.facebook.drawee.generic.GenericDraweeHierarchy;
+import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 import butterknife.BindView;
@@ -25,8 +29,15 @@ public class MyLockScreenActivity extends AppCompatActivity {
         //将Activity显示在锁屏之上
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
-        background.setImageURI(urlAddress);
 
+        GenericDraweeHierarchyBuilder builder =
+                new GenericDraweeHierarchyBuilder(getResources());
+        GenericDraweeHierarchy hierarchy = builder
+                .setProgressBarImage(new ProgressBarDrawable())
+                .setActualImageScaleType(ScalingUtils.ScaleType.CENTER_INSIDE)
+                .build();
+        background.setHierarchy(hierarchy);
+        background.setImageURI(urlAddress);
 
     }
 }
