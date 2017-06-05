@@ -20,7 +20,7 @@ import butterknife.ButterKnife;
 public class MyLockScreenActivity extends AppCompatActivity {
     @BindView(R.id.iv_background)
     SimpleDraweeView background;
-    private String urlAddress="http://o9f57g3sh.bkt.clouddn.com/16-8-31/3221513.jpg";
+    private String urlAddress="http://o9f57g3sh.bkt.clouddn.com/589184.jpg";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
