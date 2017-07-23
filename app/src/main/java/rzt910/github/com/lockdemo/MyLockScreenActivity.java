@@ -32,11 +32,11 @@ public class MyLockScreenActivity extends AppCompatActivity {
 
         GenericDraweeHierarchyBuilder builder =
                 new GenericDraweeHierarchyBuilder(getResources());
-        GenericDraweeHierarchy hierarchy = builder
+       /* GenericDraweeHierarchy hierarchy = builder
                 .setProgressBarImage(new ProgressBarDrawable())
                 .setActualImageScaleType(ScalingUtils.ScaleType.CENTER_INSIDE)
                 .build();
-        background.setHierarchy(hierarchy);
+        background.setHierarchy(hierarchy);*/
         background.setImageURI(urlAddress);
 
     }
